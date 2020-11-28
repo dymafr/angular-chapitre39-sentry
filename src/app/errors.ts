@@ -1,7 +1,8 @@
-import { ErrorHandler } from '@angular/core';
+import { ErrorHandler, Injectable } from '@angular/core';
 import * as Sentry from '@sentry/browser';
 import { environment } from 'src/environments/environment';
 
+@Injectable()
 export class MyErrorHandler implements ErrorHandler {
   constructor() {
     if (environment.production) {
